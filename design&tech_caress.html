@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link href="design&tech_caress.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Esteban&display=swap" rel="stylesheet">
+    <title>FELICIA TIFFANY HERTADA's PORTFOLIO WORK-DESIGN</title>
+</head>
+<body>
+    <div id="white-overlay"></div>
+    <div id="loader"></div>
+
+    <div class="navigation">
+        <div class="box">
+            <img src="portfolio picture/logosmall.png" alt="" id="logosmall">
+        </div>
+        <ul class="navigationlist">
+            <button class="navitem" id="home-link">Home</button>
+            <button id="nav-hover">Work</button>
+            <button class="navitem" id="creative-link">Creative</button>
+            <button class="navitem" id="about-link">About</button>
+            <button class="navitem" id="contact-link">Contact</button>
+        </ul>
+    </div>
+
+    <header class="navbar">
+        <div class="designitem item1"><a href="portfolio_work_design&technology.html">DESIGN & TECHNOLOGY</a></div>
+    </header>
+    
+    <main>
+        <div class="title">
+            <h1>Caress A Bear</h1>
+        </div>
+
+        <!-- Portfolio Section -->
+        <section>
+            <!-- <div class="artlist">
+                <div class="art-container">
+                    <div class="art-desc"> -->
+                        <div class="container">
+                            <div class="colorfulimage">
+                                <img src="portfolio picture/design&tech/Caress_main 2.jpeg" alt="Caress A Bear">
+                            </div>
+                            
+                           
+                            
+                            <div class="desc">
+                            <h2>Abstract</h2>
+                            <p>Caress A Bear is an interactive art piece inspired by the classic arcade game Whack-A-Mole. Designed to be playful and mischievous, it invites participants into a friendly competition with Vano, a lively bear who eagerly engages with the audience. As the game progresses, Vano becomes increasingly enthusiastic—speeding up and almost interacting directly with the player—creating a dynamic and entertaining experience.
+                                The game is simple: the audience's goal is to "caress" or touch the bear. Pressing a button calls Vano out of hiding, but as soon as someone tries to reach him, he playfully retreats, turning the interaction into an amusing game of hide-and-seek. The installation operates through two main inputs: a button that summons Vano and a distance sensor that detects hand movements. Inside the box, a servo motor powers a seesaw mechanism, allowing Vano to pop in and out, enhancing the sense of interactivity and engagement.
+                                The final project combined electronic interaction, mechanical movement, and digital animation to create an engaging and responsive installation. The integration of Arduino-based control, sensor-driven interaction, and dynamic visual feedback resulted in a playful and interactive experience that encouraged continuous user participation. The final piece demonstrated a seamless blend of technology and design, offering an engaging and immersive user experience.
+                                
+                            </p>
+                            
+                            <div class="video-container">
+                                <h2>Project Video</h2>
+                                <iframe width="560" height="315" src="https://youtu.be/ZoZo1ZZJHvw" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <h2>Tools & Materials</h2>
+                           
+                            <ul>
+                                <li> <b>Arduino Uno </b> – Microcontroller responsible for handling user interactions and controlling movement.</li>
+                                <li> <b>Servo Motor </b> – Powers the seesaw mechanism, enabling the bear to pop in and out dynamically.</li>
+                                <li> <b> Ultrasonic Distance Sensor (HC-SR04) </b> – Detects proximity and triggers the bear’s reaction.</li>
+                                <li> <b> Push Button  </b> – Activates the bear’s movement upon user interaction.</li>
+                                <li> <b> Wood & Acrylic </b> – Manages the visual interface and animated text interactions.</li>
+                                <li> <b> Processing (Java-based IDE) </b> – Detects proximity and triggers the bear’s reaction.</li>
+                                <li> <b> Laser Cutter & Hand Tools </b> – Used for precise cutting and assembly</li>
+                                <li> <b> Adhesives, Screws, and Hinges  </b> – Essential for securing components and ensuring durability.</li>
+                            </ul>
+                            </div>
+                            <div class="collage">
+                                <img src="portfolio picture/design&tech/dialogue_process.JPG" alt="Collage Image 1">
+                                <img src="portfolio picture/design&tech/dialogue_process2.JPG" alt="Collage Image 2">
+                                <img src="portfolio picture/design&tech/dialogue_process3.JPG" alt="Collage Image 3">
+                                <img src="portfolio picture/design&tech/IMG_0617.JPG" alt="Collage Image 4">
+                            </div>
+                            <div class="slider-container">
+                                <div class="slider" id="slider1">
+                                <img class="slide" src="portfolio picture/design&tech/" alt="Slide 1">
+                                <img class="slide" src="portfolio picture/design&tech/dialogue_2.JPG" alt="Slide 2">
+                                <img class="slide" src="portfolio picture/design&tech/dialogue_3.JPG" alt="Slide 3">
+                                <img class="slide" src="portfolio picture/design&tech/dialogue_4.JPG" alt="Slide 4">
+                                <img class="slide" src="portfolio picture/design&tech/dialogue_5.JPG" alt="Slide 5">
+                                 </div>
+                                 <div class="navigation-buttons">
+                                    <button class="prev" onclick="moveSlide(-1, 'slider1')">&#10094;</button>
+                                    <button class="next" onclick="moveSlide(1, 'slider1')">&#10095;</button>
+                                </div>
+                            </div>
+                            <div class="desc">
+                            <h2>Development Process</h2>
+                            <h3>1. Programming & Interaction Design</h3>
+                            <p>The foundation of the project was established through Arduino programming, which controlled the bear’s movements and responses to user input. The system utilized a servo motor to manage the bear’s positioning while integrating an ultrasonic distance sensor to detect hand proximity. The interactive sequence was designed to create a playful engagement where the bear dynamically reacted to audience interaction.
+                                A structured function-based approach ensured smooth operation, with specific conditions determining when the bear would emerge or retreat. Timed intervals introduced an autonomous movement pattern, creating a continuous engagement cycle that encouraged further interaction.
+                                
+                            </p>
+                            
+                            <h3>2. Physical Construction & Mechanical Integration</h3>
+                            <p> The enclosure was constructed using wood built at the Woodlab, providing a sturdy framework to house the electronic components. The internal mechanism featured a precisely designed seesaw system. The servo motor was strategically positioned to achieve consistent movement, ensuring responsive and natural interactions.
+                                The assembly process involved precision cutting and alignment of structural components. Hinges and fastening elements were incorporated to allow for accessibility while maintaining durability. The final build successfully combined aesthetics with functionality, creating an engaging physical interface.
+                                
+                            </p>
+                            
+                            <h3>3. Visual & Text-Based Interaction</h3>
+                            <p> To enhance user engagement, a Processing-based digital interface was developed to complement the physical installation. This interface displayed dynamic text interactions that responded to the bear’s movement. Serial communication between Arduino and Processing enabled real-time feedback, allowing the bear to display playful messages corresponding to user actions.
+                                The interface design focused on clarity and accessibility, ensuring that the textual elements complemented the physical gameplay. The result was an integrated system where both digital and physical components worked cohesively to provide an immersive experience.
+                                
+                            </p>
+                           
+            </div>
+        </section>
+        
+        
+        
+        
+        
+    </main>
+
+    <script src="design&tech_caress.js"></script>
+</body>
+</html>

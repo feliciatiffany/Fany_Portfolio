@@ -182,6 +182,7 @@ figcaption {
     text-align: center;
     margin: auto;
     justify-items: center;
+    padding-bottom: 20px;
 }
 .desc {
     font-family: "Esteban", sans-serif;
@@ -193,6 +194,31 @@ figcaption {
     text-align: justify;
     margin: 20px;
 }
+
+.desc h2{
+    font-weight: 600;
+    color:#DE826d;
+    font-size: 20pt;
+}
+.desc p,ul,h3,h4{
+    color:#62232D;
+    font-weight: 400;
+    font-family:'Montserrat', sans-serif;
+}
+.flowchart{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.flowchart img {
+    width: 100%;
+    background-color:#fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* TABLE */
 
 .table-container {
     max-width: 800px;
@@ -210,18 +236,18 @@ table {
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px #F7EDE3;
     padding: 12px;
     text-align: left;
 }
 
 th {
-    background-color: #007bff;
-    color: white;
+    background-color:#DE826d;
+    color: #F3E0D1;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #F7EDE3;
 }
 
 .title {
@@ -254,6 +280,7 @@ tr:nth-child(even) {
 /* Image etc */
 
 .slider-container {
+    display: flex;
     position: relative;
     width: 80%;
     max-width: 1400px;
@@ -261,11 +288,13 @@ tr:nth-child(even) {
     align-content: center;
     overflow: hidden;
     
+    margin-bottom: 30px;
 }
 
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    margin-top: 20px;
 }
 
 .slide {
@@ -310,17 +339,65 @@ tr:nth-child(even) {
 .table-container {
     margin-top: 20px;
 }
+
+
 .collage {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden; 
+    padding: 10px; 
+    margin: 20px;
 }
+
 .collage img {
-    width: 48%;
     border-radius: 8px;
+    width: calc(33.333% - 10px);
+    height: 400px;
+    object-fit: cover;
+    min-width: 400px;
 }
 
 
+.colorfulimage {
+    display: flexbox;
+    flex-direction: column;
+    margin: 0;
+    width: 90%;
+    
+}
+
+.colorfulimage img{
+    width: 18%;
+}
+
+.mockupimage  {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: 90%;
+    justify-content: center;
+    object-fit: fill;
+    gap: 10px;
+    
+}
+
+.mockupimage img{
+    width: 30%;
+}
+
+.video-container {
+    margin-top: 20px;
+    text-align: center;
+}
+.video-container iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
 /* .artlist {
     padding: 10px;
     text-decoration: none;
