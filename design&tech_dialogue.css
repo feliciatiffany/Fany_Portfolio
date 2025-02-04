@@ -1,15 +1,14 @@
 body {
-    background-color:#F7EDE3;
+    background-color: #DE826d;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
 }
 main { 
     max-width: 1500px;
-
     margin-top:  10px; 
     font-family: 'Montserrat', sans-serif;
-    background-color:#F7EDE3;
+    background-color: #DE826d;
 }
 
 
@@ -75,27 +74,10 @@ figcaption {
 }
 
 .item1 {
-    background-color:#62232D;  
-    box-shadow: inset 5px -5px 7px rgba(0, 0, 0, 0.2);  
-    border-radius: 0 0 20px 0;
     text-decoration: none;
+   
 }
 
-.item2 {
-    text-decoration: none;
-    color:#DE826d;
-}
-.item3 {
-    text-decoration: none;
-    background-color: #402653;
-    box-shadow: inset 5px -5px 7px rgba(0, 0, 0, 0.2);  
-    border-radius: 0 0 0 20px; 
-}
-.item4 {
-    text-decoration: none;
-    background-color: #2C2B30; 
-    box-shadow: inset 5px -5px 7px rgba(0, 0, 0, 0.2);   
-}
 
 .nav-item:hover {
     background-color: #62232D;   
@@ -108,7 +90,7 @@ figcaption {
 
 /* navigation */
 #nav-hover {
-    color: #DE826d !important;
+    color: #F3E0D1 !important;
     text-decoration: none;
 }
 
@@ -118,13 +100,10 @@ figcaption {
     left: 0%;
     width:10% ;
     height: 40%;
-   
 }
 .navigation .box{
     border-radius: 0px 25px 25px 0px;
-    background-color:#F7EDE3;
-    border: solid #000; 
-    border-width: 1px 1px 1px 0;
+    background-color: #F7EDE3;
     width: 100%;
     height:20%;
     left: 0%;
@@ -170,7 +149,7 @@ figcaption {
 
 .navigationlist .navitem:hover{
     transform: translateY(5px);
-    color: #DE826d !important;
+    color: #f28582 !important;
     text-decoration: none;
 }
 
@@ -188,20 +167,70 @@ figcaption {
 
 .navigationlist .navitem a:hover {
     transform: translateY(5px);
-    color: #DE826d;
+    color: #f28582;
     text-decoration: none;
 }
 
 
+/* FOR DESCRIPTION */
+.container {
+    width: 70%;;
+    margin: auto;
+    background:#F3E0D1;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto;
+    justify-items: center;
+}
+.desc {
+    font-family: "Esteban", sans-serif;
+    font-weight: 400;
+    font-size: 11pt;
+    line-height: 1.8;
+    color: #DE826d;
+    width: 90%;
+    text-align: justify;
+    margin: 20px;
+}
 
+.table-container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
 .title {
     display: grid;        
     place-items: center;          
     height: 200px;          
-    background-color:#F7EDE3; 
+    background-color: none; 
     margin-top:10%;
-    margin-bottom: 10%;
+    margin-bottom: 0;
 }
 #portfoliotext {
     height: auto;
@@ -215,140 +244,131 @@ figcaption {
 .title h1 {
     font-family: "Montserrat", cursive;
     font-weight: 800;
-    font-style: normal;
-    font-size: 80pt;
-    top: 10%;
-    color:#DE826d;
-    margin: auto; 
+    font-size: 50pt;
+    color: #F3E0D1;
+    margin: 0; 
     padding: 0;
 }
 
-.title h2 {
-    font-family: "Esteban", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14pt;
-    top: 10%;
-    color:#DE826d;
+
+/* Image etc */
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 1400px;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+    
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    object-fit: contain;
     margin: auto;
-    padding: 0;
+    max-height:700px;
 }
 
-/* ART WORK LIST */
-.collection-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 1500px;
-    margin: 0 auto;
-    margin-right: 10%;
-    margin-left: 10%;
+.slide img {
+    width: 100%;
     
+    object-fit: contain;
+
 }
-.artlist {
-    background-color:none;
+.navigation-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
     padding: 10px;
-    border-radius: 50px;
-    
+    cursor: pointer;
+    font-size: 18px;
 }
 
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.table-container {
+    margin-top: 20px;
+}
+.collage {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.collage img {
+    width: 48%;
+    border-radius: 8px;
+}
+
+
+/* .artlist {
+    padding: 10px;
+    text-decoration: none;
+    margin: 40px;
+}
 
 .art-container {
-    background-color:#DE826d;
-    
-    padding: 10px;
-    border-radius: 40px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
-    transition: transform 0.3s ease;
-}
-.art-container:hover{
-    
-    transform: translateX(10px) translateY(10px);
-}
-.art-title{
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 22px;
-    margin: 20px 0 0 0;
-    line-height: 26px;
-    color: #F3E0D1;
-}
-.art-work {
-    display: block;
-    overflow: hidden;
-    width: 80%;
-    box-shadow: 0 0 20px 1px rgba(51, 51, 51, .7);
-
-    margin: 30px auto;
-}
-
-.art-desc{
-    font-family: "Esteban", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-size: 12pt;
-    margin-bottom: 30px;
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 80%;
-    line-height: 20px;
-    color: #F3E0D1;
-}
-
-
-
-/* 2023 work */
-.pastwork {
-    background-color: none;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.past-container {
-    background-color: none;
-    padding: 5px;
-    border-radius: 80px;
-    margin-top: 30px !important;
-    margin: 10%;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-    background-color:#62232D;
-    text-align: center;
-    padding-bottom: 50px;
-}
-.past-title{
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 40pt;
-    line-height: 26px;
-    color: #F3E0D1;
-}
-.past-work {
-    display: block;
-    overflow: hidden;
     margin: auto;
-    width: 90%;
-    box-shadow: 0 0 20px 1px rgba(51, 51, 51, .7);
+    padding: 20px;
+    width: 100%;
+    gap: 40px;
 }
 
-.past-desc{
+.art-desc {
     font-family: "Esteban", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 12pt;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 80%;
-    line-height: 20px;
+    font-size: 11pt;
+    line-height: 1.8;
     color: #F3E0D1;
+    width: 100%;
+    text-align: justify;
+   
+    
+} */
+
+
+.grid1 {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+    gap: 40px;
 }
+.grid2 {
+    display: grid;
+    grid-template-columns: 43% 56%; /* Two equal-width columns */
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+    gap: 1%;
+}
+
+
 
 /* White Overlay */
 #white-overlay {

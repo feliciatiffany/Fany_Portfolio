@@ -268,9 +268,7 @@ figcaption {
 
 .slider-container {
     position: relative;
-    width: 100%;
-    max-width: 1400px;
-    margin: auto;
+    margin: 100px;
     align-items: center;
     align-content: center;
     overflow: hidden;
@@ -279,6 +277,7 @@ figcaption {
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    margin: 10px;
 }
 
 .slide {
