@@ -74,3 +74,27 @@ logosmall.addEventListener("click", (event) => {
     }); 
   }, 2000); // Wait for circle expand
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let videos = document.querySelectorAll("iframe");
+
+    function playVisibleVideos() {
+        videos.forEach((video) => {
+            let rect = video.getBoundingClientRect();
+            let isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+            if (isVisible) {
+                let src = video.getAttribute("src");
+                if (!src.includes("autoplay=1")) {
+                    video.setAttribute("src", src + "&autoplay=1&mute=1");
+                }
+            }
+        });
+    }
+
+    window.addEventListener("scroll", playVisibleVideos);
+    window.addEventListener("resize", playVisibleVideos);
+    playVisibleVideos();
+});
+

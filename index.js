@@ -27,7 +27,7 @@ work.addEventListener("click", (event) => {
 
     // Redirect to the next page after fade-out
     setTimeout(() => {
-      window.location.href = "portfolio_work_design.html";
+      window.location.href = "portfolio_work_design&technology.html";
     }); 
   }, 2000); // Wait for circle expand
 });
