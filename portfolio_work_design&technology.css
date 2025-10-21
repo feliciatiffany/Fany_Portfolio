@@ -463,20 +463,25 @@ main, section { max-width: 100%; }
 @media (max-width: 600px) {
   html, body { overflow-x: hidden; }
 
-  /* Navbar: kecilkan dan beri ruang di atas konten */
   .navbar { 
     height: auto; 
     padding: 4px 8px; 
     gap: 4px; 
   }
   .designitem { font-size: 11pt; padding: 8px; }
-  main { margin-top: 64px; }  /* ruang untuk navbar fixed */
+  main { margin-top: 64px; } 
 
-  /* Sembunyikan side navigation di HP */
   .navigation { display: none; }
 
-  /* Hero/title lebih kompak */
-  .title { margin-top: 40px; height: auto; padding: 16px 0; }
+ .title h1, .title h2 {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%;
+
+}
+
+
+
   .title h1 { font-size: 36px; line-height: 1.1; }
   .title h2 { font-size: 14px; }
 
@@ -486,7 +491,6 @@ main, section { max-width: 100%; }
   figure { width: 100%; margin: 0; }
   figcaption { max-width: 100%; padding: 0 12px; }
 
-  /* Grid koleksi: 1 kolom di HP */
   .collection-list { 
     grid-template-columns: 1fr; 
     gap: 12px; 
@@ -495,8 +499,47 @@ main, section { max-width: 100%; }
 
   .video-container-square { max-width: 100%; }
 
-  /* Bagian “past work” lebih ringkas */
   .past-container { margin: 16px; border-radius: 24px; }
   .past-title { font-size: 28pt; }
   .past-desc { width: 92%; font-size: 11pt; }
 }
+
+ /* --- TITLE: spacing + normal sizes --- */
+.title {
+  /* spasi dari tepi kiri/kanan di semua ukuran layar */
+  padding-inline: clamp(16px, 5vw, 32px);
+}
+
+/* iOS notch/safe-area */
+@supports (padding: max(0px)) {
+  .title {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+}
+
+/* ukuran "normal" (desktop/tablet) */
+.title h1 {
+  font-size: clamp(32px, 6vw, 56px);
+  line-height: 1.1;
+}
+.title h2 {
+  font-size: clamp(14px, 2.8vw, 20px);
+}
+
+/* phone ≤600px: tetap ada jarak dari sudut + ukuran wajar */
+@media (max-width: 600px) {
+  .title {
+    padding: 16px 20px;        /* jarak ekstra dari sudut layar kecil */
+  }
+  .title h1, .title h2 {
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .title h1 { font-size: 32px; }
+  .title h2 { font-size: 14px; }
+}
+
+
+
