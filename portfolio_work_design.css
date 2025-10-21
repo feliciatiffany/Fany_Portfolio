@@ -377,3 +377,72 @@ figcaption {
     opacity: 1;
   }
     
+  /* --- GLOBAL FIXES --- */
+*, *::before, *::after { box-sizing: border-box; }
+img { width: 100%; height: auto; display: block; }
+
+/* Keep layout centered but allow comfy gutters */
+main, section { max-width: 1500px; }
+section { padding-inline: clamp(16px, 5vw, 32px); }
+
+/* --- TITLE: add side space + normalize sizes --- */
+.title {
+  padding-inline: clamp(16px, 6vw, 40px); /* space from corners on all screens */
+}
+
+@supports (padding: max(0px)) {
+  .title {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+}
+
+.title h1 {
+  font-size: clamp(32px, 7vw, 56px); /* “normal” across devices */
+  line-height: 1.1;
+  margin: 0;
+}
+.title h2 {
+  font-size: clamp(14px, 2.8vw, 20px);
+  margin: 0;
+}
+
+/* --- COLLECTION GRID: better gutters --- */
+.collection-list {
+  max-width: 1500px;
+  margin: 0 auto;                         /* center */
+  padding-inline: clamp(12px, 4vw, 40px); /* replace 10% margins with responsive padding */
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* --- NAV & HERO SAFE MOBILE LAYOUT --- */
+@media (max-width: 900px) {
+  figure { width: 80%; }
+}
+
+@media (max-width: 600px) {
+  html, body { overflow-x: hidden; }
+
+  /* avoid content under fixed navbar */
+  main { margin-top: 64px; }
+
+  /* hide side nav on phones */
+  .navigation { display: none; }
+
+  /* title center + full width text area */
+  .title { padding-block: 16px; }
+  .title h1, .title h2 { text-align: center; max-width: 100%; }
+
+  /* media blocks */
+  figure { width: 100%; margin: 0 auto; }
+  figcaption { max-width: 100%; padding-inline: 12px; }
+
+  /* grid → single column on phones */
+  .collection-list { grid-template-columns: 1fr; padding-inline: 16px; gap: 12px; }
+
+  /* past section spacing */
+  .past-container { margin: 16px; border-radius: 24px; }
+  .past-title { font-size: 28pt; }
+  .past-desc { width: 92%; font-size: 11pt; }
+}
